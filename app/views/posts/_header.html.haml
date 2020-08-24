@@ -1,0 +1,13 @@
+.post
+  .header
+    .left-header
+      %i.fa.fa-home.fa-2x
+      .form
+        = form_tag posts_path, method: :get do
+          = text_field_tag :body, '', class: 'form__input'
+          = submit_tag '検索', class: 'form__btn'
+    %ul.lists
+      %li.list
+        ログイン
+      %li.list
+        新規登録
