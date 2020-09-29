@@ -7,7 +7,7 @@
     height: 60px;
     background-color: rgb(58, 207, 195);
     width: 100vw;
-    padding: 0 100px;
+    padding: 0 30px;
     border-bottom: 1px solid #D8D8D8;
     display: flex;
     .left-header {
@@ -39,40 +39,9 @@
         margin-right: 30px;
         cursor: pointer;
       }
-    }
-  }
-  .plans {
-    height: calc(100vh - 160px);
-    overflow: scroll;
-    .plan {
-      height: 100px;
-      width: 1000px;
-      margin: 0 auto;
-      border: 1px solid #D8D8D8;
-      .left-plan {
-        width: 600px;
-        float: left;
-        &__user-name {
-          font-size: 20px;
-          padding: 10px 10px;
-        }
-        &__title {
-          font-size: 30px;
-          padding: 0 10px;
-        }
-      }
-      .right-plan {
-        width: 198px;
-        float: right;
-        padding-top: 35px;
-        &__detail {
-          font-size: 20px;
-          text-align: center;
-          a {
-            text-decoration: none;
-            color: blue;
-          }
-        }
+      a {
+        text-decoration: none;
+        color: black;
       }
     }
   }
