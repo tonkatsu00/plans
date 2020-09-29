@@ -1,0 +1,41 @@
+.main { 
+  width: calc(100vw - 300px);
+  float: right;
+  &__content {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 40px 60px 20px 50px;
+  }
+  &__action {
+    padding: 0 60px;
+    .task {
+      height: 53px;
+      display: flex;
+      border-bottom: 1px solid #f0f0f0;
+      .task-left__top {
+        display: flex;
+        &__title {
+          padding-left: 10px;
+        }
+      }
+      .task-left__date {
+        font-size: 14px;
+        padding-left: 25px;
+      }
+      .task-right {
+        display: flex;
+        margin-left: auto;
+        &__edit {
+          margin-right: 10px;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+    .add-task {
+      margin: 10px 0 0 25px;
+    }
+  }
+}
