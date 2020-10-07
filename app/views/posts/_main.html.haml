@@ -4,17 +4,16 @@
   .main__action
     .main__action__plan
       %ul.tasks
-        - @tasks.each do |task|
-        %li.task
-          = task.content
+        - @posts.each do |post|
+          %li.task
             .task-left
               .task-left__top
                 .task-left__top__button
                   = check_box_tag :check1
                 .task-left__top__title
-                  個人アプリ開発
+                  = post.title
               .task-left__date
-                8月20日(水)
+                = post.due_date
             .task-right
               .task-right__edit
                 = link_to '編集'
@@ -22,6 +21,3 @@
                 = link_to '削除'
       .add-task
         タスクを追加
-
-
-
