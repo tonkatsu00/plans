@@ -5,7 +5,7 @@
   background-color: #f3f4f5;
   .header {
     height: 60px;
-    background-color: rgb(58, 207, 195);
+    background-color: #3CCACE;
     width: 100vw;
     padding: 0 30px;
     border-bottom: 1px solid #D8D8D8;
@@ -22,6 +22,7 @@
         width: 400px;  
       }
         .form__input {
+          font-size: 20px;
           height: 40px;
           width: 300px;
         }

@@ -11,6 +11,15 @@ class PostsController < ApplicationController
   end
   
   def create
+    @post = Post.new(post_params)
+
+    if @post.save
+      flash[:success] = "タスクが投稿されました"
+      redirect_to root_path
+    else
+      flash[:danger] = "タスクが投稿されません"
+      render :new
+    end
   end
 
   def edit
@@ -20,5 +29,11 @@ class PostsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:content)
   end
 end

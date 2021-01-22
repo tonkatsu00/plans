@@ -28,14 +28,21 @@
         &__edit {
           margin-right: 10px;
         }
-        a {
-          text-decoration: none;
-          color: black;
-        }
       }
     }
     .add-task {
-      margin: 10px 0 0 25px;
+      padding-top: 10px;
+    }
+    .task-link {
+      color: #808080;
+    }
+    .task-link:hover {
+      color: #3CCACE;
     }
   }
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
