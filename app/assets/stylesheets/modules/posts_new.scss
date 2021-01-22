@@ -8,7 +8,7 @@
     &__form {
       width: 700px;
       height: 40px;
-      font-size: 20px；
+      font-size: 1rem;
     }
   }
   .date {
@@ -25,7 +25,7 @@
   //   &__form {
   //     width: 700px;
   //     height: 40px;
-  //     font-size: 20px；
+  //     font-size: 1rem;
   //   }
   // }
   .memo {
@@ -37,12 +37,13 @@
       text-align: initial;
       width: 703px;
       height: 300px;
-      font-size: 20px;
+      font-size: 1rem;
     }
   }
   .add-btn {
     text-align: center;
-    .task-btn {
+    input.task-btn {
+      display: inline-block;
       width: 200px;
       line-height: 48px;
       background: #3CCACE;

@@ -15,5 +15,5 @@
       = f.fields_for :comments do |c|
         = c.text_area :text, class: "memo__form"
     .add-btn
-      %button{type: "submit", class: "task-btn"}
-        追加
+      %button.task-btn{type: "submit", method: "post"}
+        投稿
