@@ -17,17 +17,17 @@
       font-size: 20px;
     }
   }
-  .sub-task {
-    padding-bottom: 30px;
-    &__paragraph3 {
-      font-size: 20px;
-    }
-    &__form {
-      width: 700px;
-      height: 40px;
-      font-size: 20px；
-    }
-  }
+  // .sub-task {
+  //   padding-bottom: 30px;
+  //   &__paragraph3 {
+  //     font-size: 20px;
+  //   }
+  //   &__form {
+  //     width: 700px;
+  //     height: 40px;
+  //     font-size: 20px；
+  //   }
+  // }
   .memo {
     padding-bottom: 30px;
     &__paragraph4 {
@@ -36,7 +36,7 @@
     &__form {
       text-align: initial;
       width: 703px;
-      height: 280px;
+      height: 300px;
       font-size: 20px;
     }
   }
@@ -51,10 +51,14 @@
       border-radius: 100px;
       cursor: pointer;
       font-size: 20px;
+      font-weight: bold;
     }
   }
 }
 
+.task-btn:hover {
+  opacity: .6;
+}
 
 p {
   font-size: 30px;

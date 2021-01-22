@@ -6,10 +6,10 @@
     .date
       %p.date__paragraph2 期日
       = f.date_select :due_date, class: "date__deadline"
-    .sub-task
-      %p.sub-task__paragraph3 サブタスク
-      = f.fields_for :sub_tasks do |t|
-        = t.text_field :task, class: "sub-task__form"
+    -# .sub-task
+    -#   %p.sub-task__paragraph3 サブタスク
+    -#   = f.fields_for :sub_tasks do |t|
+    -#     = t.text_field :task, class: "sub-task__form"
     .memo
       %p.memo__paragraph4 メモ
       = f.fields_for :comments do |c|
