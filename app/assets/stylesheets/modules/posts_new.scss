@@ -1,0 +1,61 @@
+.new-task {
+  margin: 30px 25%;
+  .task {
+    padding-bottom: 30px;
+    &__paragraph1 {
+      font-size: 20px;
+    }
+    &__form {
+      width: 700px;
+      height: 40px;
+      font-size: 20px；
+    }
+  }
+  .date {
+    padding-bottom: 30px;
+    &__paragraph2 {
+      font-size: 20px;
+    }
+  }
+  .sub-task {
+    padding-bottom: 30px;
+    &__paragraph3 {
+      font-size: 20px;
+    }
+    &__form {
+      width: 700px;
+      height: 40px;
+      font-size: 20px；
+    }
+  }
+  .memo {
+    padding-bottom: 30px;
+    &__paragraph4 {
+      font-size: 20px;
+    }
+    &__form {
+      text-align: initial;
+      width: 703px;
+      height: 280px;
+      font-size: 20px;
+    }
+  }
+  .add-btn {
+    text-align: center;
+    .task-btn {
+      width: 200px;
+      line-height: 48px;
+      background: #3CCACE;
+      border: 1px solid #3CCACE;
+      color: #fff;
+      border-radius: 100px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+  }
+}
+
+
+p {
+  font-size: 30px;
+}

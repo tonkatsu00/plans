@@ -1,0 +1,19 @@
+.new-task
+  = form_for @post do |f|
+    .task
+      %p.task__paragraph1 タスク
+      = f.text_field :title, class: "task__form"
+    .date
+      %p.date__paragraph2 期日
+      = f.date_select :due_date, class: "date__deadline"
+    .sub-task
+      %p.sub-task__paragraph3 サブタスク
+      = f.fields_for :sub_tasks do |t|
+        = t.text_field :task, class: "sub-task__form"
+    .memo
+      %p.memo__paragraph4 メモ
+      = f.fields_for :comments do |c|
+        = c.text_area :text, class: "memo__form"
+    .add-btn
+      %button{type: "submit", class: "task-btn"}
+        追加
