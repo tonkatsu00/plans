@@ -7,7 +7,13 @@
           = text_field_tag :body, '', class: 'form__input'
           = submit_tag '検索', class: 'form__btn'
     %ul.lists
-      %li.list
-        =link_to 'ログイン'
-      %li.list
-        =link_to '新規登録'
+    -if user_signed_in?
+      %li.my-page
+        = link_to "名前", user_path(current_user)
+      %li.logout
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
+    - else
+      %li.login
+        = link_to 'ログイン', new_user_session_path
+      %li.sign-up
+        = link_to '新規登録', new_user_registration_path

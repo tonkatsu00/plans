@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201016001816) do
+ActiveRecord::Schema.define(version: 20210124080158) do
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "text",       limit: 65535
@@ -23,13 +23,13 @@ ActiveRecord::Schema.define(version: 20201016001816) do
   end
 
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "title",      null: false
-    t.date     "due_date",   null: false
-    t.string   "stutas",     null: false
-    t.integer  "users_id",   null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["users_id"], name: "index_posts_on_users_id", using: :btree
+    t.string   "title",                    null: false
+    t.date     "due_date",                 null: false
+    t.text     "memo",       limit: 65535, null: false
+    t.integer  "user_id",                  null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
   create_table "sub_tasks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -56,6 +56,6 @@ ActiveRecord::Schema.define(version: 20201016001816) do
 
   add_foreign_key "comments", "posts", column: "posts_id"
   add_foreign_key "comments", "users", column: "users_id"
-  add_foreign_key "posts", "users", column: "users_id"
+  add_foreign_key "posts", "users"
   add_foreign_key "sub_tasks", "posts", column: "posts_id"
 end

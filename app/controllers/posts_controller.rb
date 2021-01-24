@@ -11,13 +11,13 @@ class PostsController < ApplicationController
   end
   
   def create
-    @post = Post.new(post_params)
+    @post = Post.create(post_params)
 
     if @post.save
-      flash[:success] = "タスクが投稿されました"
+      # flash[:success] = "タスクが投稿されました"
       redirect_to root_path
     else
-      flash[:danger] = "タスクが投稿されません"
+      # flash[:danger] = "タスクが投稿されません"
       render :new
     end
   end
@@ -32,8 +32,7 @@ class PostsController < ApplicationController
   end
 
   private
-
   def post_params
-    params.require(:post).permit(:content)
+    params.require(:post).permit(:title, :due_date, :memo).merge(user_id: current_user.id)
   end
 end

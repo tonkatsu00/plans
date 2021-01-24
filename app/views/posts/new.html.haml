@@ -12,8 +12,8 @@
     -#     = t.text_field :task, class: "sub-task__form"
     .memo
       %p.memo__paragraph4 メモ
-      = f.fields_for :comments do |c|
-        = c.text_area :text, class: "memo__form"
+      = f.text_area :memo, class: "memo__form"
     .add-btn
-      %button.task-btn{type: "submit", method: "post"}
-        投稿
+      = f.submit "投稿する", class: "task-btn"
+      -# %button.task-btn{type: "submit", method: "post"}
+      -#   投稿
