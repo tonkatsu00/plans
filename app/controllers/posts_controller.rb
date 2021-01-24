@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   end
   
   def create
-    @post = Post.new(post_params)
+    @post = Post.create(post_params)
 
     if @post.save
       # flash[:success] = "タスクが投稿されました"
@@ -33,6 +33,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :due_date, :memo)
+    params.require(:post).permit(:title, :due_date, :memo).merge(user_id: current_user.id)
   end
 end
