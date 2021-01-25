@@ -1,7 +1,8 @@
 .post
   .header
     .left-header
-      %i.fa.fa-home.fa-2x
+      = link_to root_path do
+        %i.fa.fa-home.fa-2x
       .form
         = form_tag posts_path, method: :get do
           = text_field_tag :body, '', class: 'form__input'
