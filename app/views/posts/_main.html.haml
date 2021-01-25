@@ -15,9 +15,13 @@
               .task-left__date
                 = post.due_date
             .task-right
-              .task-right__edit
-                = link_to '編集'
-              .task-right__delete
-                = link_to '削除'
+              - if user_signed_in? && current_user.id == post.user_id
+                .task-right__edit
+                  = link_to '編集', edit_post_path(post)
+                .task-right__delete
+                  = link_to '削除', post_path(post), method: :delete
+              - else
+                .task-right__detail
+                  = link_to '詳細', post_path(post)
       .add-task
       = link_to '＋　タスクを追加', new_post_path, class: "task-link"
