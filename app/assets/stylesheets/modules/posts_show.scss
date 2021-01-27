@@ -1,0 +1,25 @@
+.task {
+  &__title {
+    font-size: 16px;
+    height: 50px;
+    border:1px solid #dedede;
+    display: flex;
+    align-items: center;
+  }
+}
+.date {
+  &__detail {
+    font-size: 16px;
+    height: 50px;
+    border:1px solid #dedede;
+    display: flex;
+    align-items: center;
+  }
+}
+.memo {
+  &__detail {
+    font-size: 16px;
+    min-height: 300px;
+    border:1px solid #dedede;
+  }
+}
