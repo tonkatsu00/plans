@@ -1,17 +1,17 @@
 .new-task
   = form_for @post do |f|
     .task
-      %p.task__paragraph1 タスク
+      %p タスク
       = f.text_field :title, class: "task__form"
     .date
-      %p.date__paragraph2 期日
+      %p 期日
       = f.date_select :due_date, class: "date__deadline"
     -# .sub-task
-    -#   %p.sub-task__paragraph3 サブタスク
+    -#   %p サブタスク
     -#   = f.fields_for :sub_tasks do |t|
     -#     = t.text_field :task, class: "sub-task__form"
     .memo
-      %p.memo__paragraph4 メモ
+      %p メモ
       = f.text_area :memo, class: "memo__form"
     .add-btn
       = f.submit "投稿する", class: "task-btn"
