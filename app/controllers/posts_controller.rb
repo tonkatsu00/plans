@@ -2,6 +2,9 @@ class PostsController < ApplicationController
 before_action :set_post, only: [:show, :edit, :update, :destroy]
   def index
     @posts = Post.all
+    require "date"
+    @date_today = Date.today
+    @posts_today = Post.where(due_date: Date.today)
   end
 
   def show

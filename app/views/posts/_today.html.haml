@@ -1,10 +1,10 @@
 .main
   .main__content
-    タスク一覧
+    今日
   .main__action
     .main__action__plan
       %ul.tasks
-        - @posts.each do |post|
+        - @post_today.each do |post|
           %li.task
             .task-left
               .task-left__top
